@@ -10,13 +10,15 @@ const options = {
   target: 'http://localhost:3000',
   changeOrigin: true,
   router: {
-    '/rooms': 'http://localhost:3004',
+    '/api': 'http://localhost:3001',
+    '/rooms': 'http://localhost:3002',
     '/listings': 'http://localhost:1128',
   },
 };
 
 const apiProxy = proxy(options);
 
+app.use('/api', apiProxy);
 app.use('/rooms', apiProxy);
 app.use('/listings', apiProxy);
 
