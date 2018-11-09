@@ -2,31 +2,48 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"> -->
     <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="http://localhost:3004/style.css">
-    <title>FEC Demo</title>
+    <link rel="stylesheet" href="http://localhost:3001/style.css">
+    <link rel="stylesheet" href="http://localhost:1128/styles.css">
+    <link rel="stylesheet" href="http://localhost:3003/style.css">
+    <title>AirJLD</title>
   </head>
   <body>
-    <div id="Gallery"></div>
-    <div id="Description"></div>
-    <div id="Reviews"></div>
-    <div id="Booking"></div>
+    <!-- <div class="container">
+      <div class="row"> -->
+        <div id="Gallery"></div>
+      <!-- </div>
+      <div class="row">
+        <div class="col-xs-6"> -->
+          <div id="Description"></div>
+          <div id="Reviews"></div>
+        <!-- </div> -->
+        
+          <div id="Booking"></div>
+        
+      <!-- </div>  
+      <div class="row"> -->
+        
+      <!-- </div>
+    </div> -->
     <script src="/lib/react.development.js"></script>
     <script src="/lib/react-dom.development.js"></script>
-    <script src="http://localhost:3001/bundle.js"></script>
-    <!-- <script src="http://localhost:1128/bundle.js"></script> -->
-    <!-- <script src="http://localhost:3003/bundle.js"></script> -->
-    <script src="http://localhost:3004/bundle.js"></script>
+    <script src="http://localhost:3001/bundle.js"></script> <!-- Reviews Component -->
+    <script src="http://localhost:3002/bundle.js"></script> <!-- Booking Component-->
+    <script src="http://localhost:1128/bundle.js"></script> <!-- Gallery Component-->
+    <script src="http://localhost:3003/bundle.js"></script> <!-- Description Component-->
     <!-- see: https://reactjs.org/docs/react-without-jsx.html -->
     <script>
-      // ReactDOM.render(
-      //   React.createElement(Gallery),
-      //   document.getElementById('Gallery')
-      // );
-      // ReactDOM.render(
-      //   React.createElement(Description),
-      //   document.getElementById('Description')
-      // );
+      ReactDOM.render(
+        React.createElement(Gallery),
+        document.getElementById('Gallery')
+      );
+      ReactDOM.render(
+        React.createElement(Description),
+        document.getElementById('Description')
+      );
       ReactDOM.render(
         React.createElement(Reviews),
         document.getElementById('Reviews')
