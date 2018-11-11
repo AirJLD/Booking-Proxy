@@ -13,7 +13,7 @@ const options = {
     '/api': 'http://airjld-reivews.us-east-2.elasticbeanstalk.com',
     '/rooms': 'http://airjldbooking.us-west-2.elasticbeanstalk.com',
     '/listings': 'http://airjld2-env.nhf7jyknam.us-east-2.elasticbeanstalk.com',
-    '/description': 'http://localhost:3003',
+    '/description': 'http://jackscrap.us-west-1.elasticbeanstalk.com',
   },
 };
 
