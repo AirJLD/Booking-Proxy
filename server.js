@@ -3,16 +3,16 @@ const proxy = require('http-proxy-middleware');
 const path = require('path');
 const app = express();
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 const publicDir = path.join(__dirname, 'public');
 
 const options = {
-  target: 'http://localhost:3000',
+  target: process.env.HOST || `http://localhost:${port}`,
   changeOrigin: true,
   router: {
     '/api': 'http://localhost:3001',
-    '/rooms': 'http://localhost:3002',
-    '/listings': 'http://localhost:1128',
+    '/rooms': 'http://airjldbooking.us-west-2.elasticbeanstalk.com',
+    '/listings': 'http://airjld2-env.nhf7jyknam.us-east-2.elasticbeanstalk.com',
     '/description': 'http://localhost:3003',
   },
 };
