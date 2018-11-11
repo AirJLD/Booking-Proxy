@@ -10,7 +10,7 @@ const options = {
   target: process.env.HOST || `http://localhost:${port}`,
   changeOrigin: true,
   router: {
-    '/api': 'http://localhost:3001',
+    '/api': 'http://airjld-reivews.us-east-2.elasticbeanstalk.com',
     '/rooms': 'http://airjldbooking.us-west-2.elasticbeanstalk.com',
     '/listings': 'http://airjld2-env.nhf7jyknam.us-east-2.elasticbeanstalk.com',
     '/description': 'http://localhost:3003',
